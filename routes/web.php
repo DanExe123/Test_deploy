@@ -2,6 +2,12 @@
 
 use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
+use App\Http\Livewire\Projects;
+use App\Http\Livewire\About;
+use App\Http\Livewire\Technologies;
+use App\Http\Livewire\Contact;
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -10,6 +16,21 @@ Route::get('/', function () {
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
+
+
+
+    
+                // web pages
+                Route::get('/projects', Projects::class)->name('projects');
+                Route::get('/technologies', Technologies::class)->name('technologies');
+                Route::get('/contact', Contact::class)->name('contact');
+                Route::get('/about', About::class)->name('about');
+
+
+
+
+
+
 
 Route::middleware(['auth'])->group(function () {
     Route::redirect('settings', 'settings/profile');
