@@ -22,11 +22,19 @@
          </head>
         <body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-red-800 via-gray-900 to-black text-white text-center px-6">
         <!-- Main Content -->
+
+
+    
+        
             @include('livewire.includes.Content')
             {{--  @include('livewire.includes.floating-button')--}}
+            
             @include('livewire.includes.navbar')
-        
-        </div>   
+            </div> 
+            @include('livewire.includes.ButtonResources')
+           
+            
+
         </div>
         </body>
         <script>

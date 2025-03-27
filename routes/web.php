@@ -6,7 +6,7 @@ use App\Http\Livewire\Projects;
 use App\Http\Livewire\About;
 use App\Http\Livewire\Technologies;
 use App\Http\Livewire\Contact;
-
+use App\Http\Livewire\MyResources;
 
 
 Route::get('/', function () {
@@ -25,6 +25,7 @@ Route::view('dashboard', 'dashboard')
                 Route::get('/technologies', Technologies::class)->name('technologies');
                 Route::get('/contact', Contact::class)->name('contact');
                 Route::get('/about', About::class)->name('about');
+                Route::get('/my-resources', MyResources::class)->name('my-resources');
 
 
 
