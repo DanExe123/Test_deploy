@@ -56,7 +56,7 @@
             @mouseenter="hover = true" @mouseleave="hover = false" 
             class="transition-all duration-300 flex flex-col items-center"
             :class="{ 'scale-110': hover }">
-            <img src="/icon/attributes.png" alt="Pets" 
+            <img src="/icon/attributes.PNG" alt="Pets" 
                 class="max-w-full h-auto rounded-md">
             <svg width="50" height="80">
                 <line x1="25" y1="10" x2="25" y2="70" stroke="white" stroke-width="5" marker-end="url(#arrow)" />
@@ -68,7 +68,7 @@
             @mouseenter="hover = true" @mouseleave="hover = false" 
             class="transition-all duration-300 flex flex-col items-center"
             :class="{ 'scale-110': hover }">
-            <img src="/icon/attributesvalue.png" alt="Appointments" 
+            <img src="/icon/attributesvalue.PNG" alt="Appointments" 
                 class="max-w-full h-auto rounded-md">
         </div>
 
