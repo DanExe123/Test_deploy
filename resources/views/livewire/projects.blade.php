@@ -77,7 +77,7 @@
                 { id: 1, name: 'POS and Inventory', category: 'ReactNative', description: 'A modern Point of sale and Inventory system using ReactNative.', image: '/icon/Capture.PNG', link: '#' },
                 { id: 2, name: 'Chrome Hearts Shop', category: 'laravel', description: 'A Chromehearts Shop using T.A.L.L. Stack', image: '/icon/chomehearts.PNG', link: '#' },
                 { id: 3, name: 'E-commerce System, ', category: 'laravel', description: 'A E-commerce using Laravel Filament.', image: '/icon/ecommerce.PNG', link: '#' },
-                { id: 4, name: 'Digital Vet System', category: 'laravel', description: 'A Digital Vet clinic system with Appointment Scheduling and Data Analytics , Email Alert , RealTimeChat System.', image: '/icon/abouts.png', link: '#' },
+                { id: 4, name: 'Digital Vet System', category: 'laravel', description: 'A Digital Vet clinic system with Appointment Scheduling and Data Analytics , Email Alert , RealTimeChat System.', image: '/icon/abouts.PNG', link: '#' },
                 { id: 5, name: 'ThriftShopBCD', category: 'laravel', description: 'A simple THRIFTSHOPBCD using DaisyUi Tailwind Laravel.', image: '/icon/bplks.jpg', link: '#' },
                 { 
                 id: 6, 

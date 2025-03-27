@@ -7,7 +7,7 @@ use App\Http\Livewire\About;
 use App\Http\Livewire\Technologies;
 use App\Http\Livewire\Contact;
 use App\Http\Livewire\MyResources;
-
+use App\Http\Livewire\AlpineLivewirepage;
 
 Route::get('/', function () {
     return view('welcome');
@@ -26,6 +26,7 @@ Route::view('dashboard', 'dashboard')
                 Route::get('/contact', Contact::class)->name('contact');
                 Route::get('/about', About::class)->name('about');
                 Route::get('/my-resources', MyResources::class)->name('my-resources');
+                Route::get('/alpine-livewirepage', AlpineLivewirepage::class)->name('alpine-livewirepage');
 
 
 
