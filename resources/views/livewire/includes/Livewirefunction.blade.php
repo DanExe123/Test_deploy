@@ -1,4 +1,4 @@
-<section id="livewire" class="mb-12">
+<section id="livewire" class="mb-12" data-aos-duration="2000"  data-aos="fade-up">
     <h2 class="text-2xl font-bold mb-4">Livewire Functions</h2>
     <p class="text-gray-300">Here are some commonly used Livewire directives in frontend development:</p>
     

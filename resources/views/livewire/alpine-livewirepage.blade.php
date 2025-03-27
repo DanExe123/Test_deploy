@@ -53,36 +53,75 @@
         <section id="livewire" class="mb-12">
          @include('livewire.includes.Livewirefunction')
         </section>
-
-
                 <!-- Alpine.js Components -->
-                <section id="alpine" class="mb-12">
+                <section id="alpine" class="mb-12" data-aos-duration="2000"  data-aos="fade-up" >
                     <h2 class="text-2xl font-bold mb-4">Alpine.js Components</h2>
-                    <p class="text-gray-300">Alpine.js is a lightweight JavaScript framework that provides reactive behavior in your HTML.</p>
+                    <p class="text-gray-300">Modal transition ease-out.</p>
                     <pre class="bg-gray-800 p-4 mt-4 rounded text-sm overflow-x-auto">
-            &lt;div x-data="{ open: false }"&gt;
-            &lt;button @click="open = !open"&gt;Toggle&lt;/button&gt;
-            &lt;div x-show="open"&gt;Content Here&lt;/div&gt;
-            &lt;/div&gt;
+                &lt;x-transition:enter="transition ease-out duration-300 transform"&gt;
+                &lt; x-transition:enter-start="opacity-0 scale-90"&gt;
+                &lt;x-transition:enter-end="opacity-100 scale-100"&gt;
+                &lt;x-transition:leave="transition ease-in duration-200 transform"&gt;
+                &lt;x-transition:leave-start="opacity-100 scale-100"&gt;
+                &lt;x-transition:leave-end="opacity-0 scale-90"&gt;
+                    </pre>
+                </section>
+
+                <section id="alpine" class="mb-12" data-aos-duration="2000"  data-aos="fade-up" >
+                    <h2 class="text-2xl font-bold mb-4">Simple.
+                        Lightweight.
+                        Powerful as hell. </h2>
+                    
+                    <pre class="bg-gray-800 p-4 mt-4 rounded text-sm overflow-x-auto">
+                        <p>
+                        x-cloak
+                        Hide a block of HTML until after Alpine is finished initializing its content
+                        </p>
+                        <div class="text-blue-500">
+                        &lt;div x-cloak&gt;
+                        ...
+                        &lt;/div&gt;
+
+                          </div>
+                        <p>
+                        x-ignore
+                        Prevent a block of HTML from being initialized by Alpine
+                        </p>
+                        <div class="text-blue-500">
+                        &lt;div x-ignore&gt;
+                        ...
+                        &lt;/div&gt;
+                        </div>
                     </pre>
                 </section>
 
 
+
                    <!-- Data Tables Section -->
-            <section id="datatables" class="mb-12">
-                <h2 class="text-2xl font-bold mb-4">Data Tables</h2>
-                <p class="text-gray-300">Using DataTables for dynamic tables with sorting, searching, and pagination.</p>
-             
-                </pre>
-            </section>
-
-
-
-
-
-               
-            </main>
-            </div>
+                   <section id="datatables" class="mb-12">
+                    <h2 class="text-2xl font-bold mb-4">Data Tables</h2>
+                    <p class="text-gray-300">
+                        Using DataTables for dynamic tables with sorting, searching, and pagination.
+                    </p>
+                    
+                    <div x-data="{ showAll: false }">
+                        <pre 
+                            class="bg-gray-800 p-4 mt-4 rounded text-sm overflow-x-auto transition-all duration-300"
+                            :class="showAll ? 'max-h-full' : 'max-h-32 overflow-hidden'"
+                        >
+                            @include('livewire.includes.datatable-sourcecode')
+                        </pre>
+                        
+                        <button 
+                            @click="showAll = !showAll" 
+                            class="mt-2 text-blue-400 hover:underline focus:outline-none"
+                        >
+                            <span x-text="showAll ? 'Show Less' : 'Show More'"></span>
+                        </button>
+                    </div>
+                </section>
+                    </main>
+                    </div>
 
 @include('livewire.includes.footer')
 
