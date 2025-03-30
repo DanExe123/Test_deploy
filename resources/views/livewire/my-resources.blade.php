@@ -35,10 +35,26 @@
             <div class="absolute top-6 right-6 floating">
              @include('livewire.includes.Breadcrumbs')
             </div>
-
             <!-- Main Layout: Two Column Layout + Bottom Section -->
             <div class="flex flex-col w-full max-w-6xl">
-
+                <div class="py-20 flex flex-col items-center text-center">
+                    <h1 class="text-4xl font-bold text-white dark:text-white">
+                        <span class="text-red-700 text-4xl font-bold tracking-normal">Entity Attribute Value</span> Database Structure
+                    </h1>
+                    <p class="mt-4 max-w-3xl text-lg text-gray-300">
+                        The <strong>Entity-Attribute-Value (EAV)</strong> model is a flexible database design pattern used to store dynamic attributes for entities. 
+                        Instead of having fixed columns, attributes are stored as rows, allowing for schema flexibility.
+                    </p>
+                
+                    <div class="mt-6 max-w-3xl text-left md:text-center">
+                        <p class="text-xl font-semibold">Benefits:</p>
+                        <p class="mt-2"><strong>Highly flexible</strong> – Supports dynamic attributes without altering the schema.</p>
+                        <p class="mt-2"><strong>Efficient for sparse data</strong> – Saves storage by only storing relevant attributes.</p>
+                        <p class="mt-2"><strong>Ideal for applications with unpredictable fields</strong> (e.g., e-commerce, medical records).</p>
+                    </div>
+                </div>
+                
+                
              <!-- Two Column Layout -->
             @include('livewire.includes.EAV-table')
 

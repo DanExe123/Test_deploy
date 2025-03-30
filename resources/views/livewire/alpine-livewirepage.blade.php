@@ -31,30 +31,31 @@
                 <img src="/icon/man-wearing-baseball-cap-icon-600nw-530829364.webp" alt="Menu" class="w-10 h-10 rounded-full object-cover">
             </button>
   <!-- Sidebar Navigation -->
-  <aside class="w-64 bg-gray-800 p-6">
+  <aside class="w-64 bg-gray-800 p-6 rounded-md">
     <h2 class="text-xl font-bold mb-4">Documentation</h2>
     <nav>
         <ul>
-            <li class="mb-2"><a href="#livewire" class="text-gray-300 hover:text-white">Livewire tips&tricks</s></a></li>
-            <li class="mb-2"><a href="#alpine" class="text-gray-300 hover:text-white">Alpine.js Components</a></li>
-            <li class="mb-2"><a href="#datatables" class="text-gray-300 hover:text-white">Data Tables</a></li>
+            <li class="mb-2"><a wire:navigate href="#livewire" class="text-gray-300 hover:text-white">Livewire tips&tricks</s></a></li>
+            <li class="mb-2"><a wire:navigate href="#alpine" class="text-gray-300 hover:text-white">Alpine.js Components</a></li>
+            <li class="mb-2"><a wire:navigate href="#datatables" class="text-gray-300 hover:text-white">Data Tables</a></li>
         </ul>
     </nav>
 </aside>
-
+    
 <!-- Main Content -->
 <main class="flex-1 p-6 overflow-y-auto">
-    <!-- Breadcrumbs -->
+ 
     <div class="absolute top-6 right-6 floating">
         @include('livewire.includes.Breadcrumbs')
     </div>
 
         <!-- Livewire Functions -->
         <section id="livewire" class="mb-12">
+            
          @include('livewire.includes.Livewirefunction')
         </section>
                 <!-- Alpine.js Components -->
-                <section id="alpine" class="mb-12" data-aos-duration="2000"  data-aos="fade-up" >
+                <section id="alpine" class="mb-12" data-aos-duration="2000"  data-aos="fade-up"  >
                     <h2 class="text-2xl font-bold mb-4">Alpine.js Components</h2>
                     <p class="text-gray-300">Modal transition ease-out.</p>
                     <pre class="bg-gray-800 p-4 mt-4 rounded text-sm overflow-x-auto">
@@ -123,6 +124,5 @@
                     </main>
                     </div>
 
-@include('livewire.includes.footer')
-
+                @include('livewire.includes.footer')
 </div>

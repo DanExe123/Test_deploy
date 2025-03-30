@@ -8,6 +8,7 @@ use App\Http\Livewire\Technologies;
 use App\Http\Livewire\Contact;
 use App\Http\Livewire\MyResources;
 use App\Http\Livewire\AlpineLivewirepage;
+use App\Http\Livewire\UITools;
 
 Route::get('/', function () {
     return view('welcome');
@@ -27,6 +28,7 @@ Route::view('dashboard', 'dashboard')
                 Route::get('/about', About::class)->name('about');
                 Route::get('/my-resources', MyResources::class)->name('my-resources');
                 Route::get('/alpine-livewirepage', AlpineLivewirepage::class)->name('alpine-livewirepage');
+                Route::get('/u-i-tools', UITools::class)->name('u-i-tools');
 
 
 

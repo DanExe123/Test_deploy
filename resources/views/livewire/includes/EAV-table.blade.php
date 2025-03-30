@@ -2,7 +2,6 @@
         
     <!-- Column 1: Database Flow Chart -->
     <div class="flex flex-col items-center space-y-16">
-       
         <!-- USERS -->
         <div x-data="{ hover: false }" 
             @mouseenter="hover = true" @mouseleave="hover = false" 
