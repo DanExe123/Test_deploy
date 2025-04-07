@@ -15,34 +15,35 @@
         <a wire:navigate.prevent href="{{ route('home') }}" 
            class="relative text-white font-semibold text-lg transition-all duration-300 hover:text-red-200 
            after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-red-700 hover:after:w-full after:transition-all after:duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 9l9-7 9 7v11a2 2 0 01-2 2h-4a2 2 0 01-2-2v-6H9v6a2 2 0 01-2 2H3a2 2 0 01-2-2V9z"></path>
-            </svg>
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+          </svg>          
         </a>
         <!-- About -->
         <a wire:navigate.prevent href="{{ route('about') }}" 
            class="relative text-white font-semibold text-lg transition-all duration-300 hover:text-red-400 
            after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-red-700 hover:after:w-full after:transition-all after:duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A4 4 0 018 15h8a4 4 0 012.879 2.804M16 11a4 4 0 00-8 0"></path>
-            </svg>
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+          </svg>          
         </a>
        <!-- Projects (Updated to a new Laptop Icon) -->
-      <a wire:navigate.prevent href="{{ route('projects') }}" 
-      class="relative text-white font-semibold text-lg transition-all duration-300 hover:text-red-400 
-      after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-red-700 hover:after:w-full after:transition-all after:duration-300">
-      <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-         <path stroke-linecap="round" stroke-linejoin="round" d="M3 17h18M5 5h14a2 2 0 012 2v8H3V7a2 2 0 012-2zm-2 12h20a2 2 0 01-2 2H3a2 2 0 01-2-2z"></path>
-      </svg>
-      </a>
+       <a wire:navigate.prevent href="{{ route('projects') }}" 
+       class="relative text-white font-semibold text-lg transition-all duration-300 hover:text-red-400 
+       after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-red-700 hover:after:w-full after:transition-all after:duration-300">
+       <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18v12H3V5zm0 14h18v2H3v-2z"/>
+     </svg>
+    </a>
+    
 
         <!-- Contact (Updated to Email Icon) -->
         <a wire:navigate.prevent href="{{ route('contact') }}" 
            class="relative text-white font-semibold text-lg transition-all duration-300 hover:text-red-400 
            after:absolute after:left-0 after:bottom-0 after:w-0 after:h-[2px] after:bg-red-700 hover:after:w-full after:transition-all after:duration-300">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M3 5h18M3 5l9 7 9-7M3 19h18a2 2 0 002-2V7a2 2 0 00-2-2H3a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-            </svg>
+           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+          </svg>          
         </a>
    <!-- Technologies (Updated to Tools Icon - Wrench & Gear) -->
    <a wire:navigate.prevent href="{{ route('technologies') }}" 

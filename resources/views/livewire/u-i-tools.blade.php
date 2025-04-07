@@ -37,7 +37,7 @@
     </h1>
     
     <p class="text-gray-300 text-center max-w-2xl mb-10">
-        These are the essential tools I use for UI and backend development to build seamless and interactive applications.
+        These are the essential tools I use for UI  to build seamless and interactive applications.
     </p>
 
     <!-- Grid Container (3 Columns) -->

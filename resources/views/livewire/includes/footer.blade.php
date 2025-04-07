@@ -2,7 +2,7 @@
     <aside class="flex flex-col items-center">
         <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
             fill-rule="evenodd" clip-rule="evenodd" class="fill-current mb-2">
-            <path d="M22.672 15.226l-2.432.811..."></path>
+            <path d="M22.672 15.226l-2.432.811..."/>
         </svg>
         <p class="text-gray-600 font-bold">Developed by Dan Fred P. Cablas - All rights reserved</p>
     </aside>
