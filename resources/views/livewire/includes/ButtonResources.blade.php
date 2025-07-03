@@ -15,7 +15,7 @@
       </a>
     </div>    
 
-    <a wire:navigate.prevent href="#" 
+    <a wire:navigate.prevent href="https://kodigoui.laravel.cloud/" target="blank"
     class="flex items-center gap-2  text-white text-[13px] font-bold py-2 px-6 rounded-full shadow-lg transition duration-300 tracking-widest border border-indigo-700 
              hover:bg-indigo-300 hover:text-white">
    
