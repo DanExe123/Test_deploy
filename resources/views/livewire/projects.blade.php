@@ -103,7 +103,16 @@
                image: '/icon/inventory.jpg', // Placeholder for unavailable image
                link: '#' 
            },
-
+           
+           { 
+               id: 9, 
+               name: 'KodigoUI', 
+               category: 'laravel', 
+               description: 'Powered By Tall Stack. (MyUIlibrary)', 
+               image: '/icon/kodigu.jpg', // Placeholder for unavailable image
+               link: '#' 
+           },
+           
           
            ],
        }));
