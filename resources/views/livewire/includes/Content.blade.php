@@ -21,16 +21,36 @@
     </style>
 
 <!-- content -->
-<div x-data="{ message: '', show: false, x: 0 }" class="relative inline-block">
+<div x-data="{ message: '', show: false, x: 0, showImage: false }" class="relative inline-block">
   <h1 class="text-6xl font-extrabold">
-    Hello, I'm Dan <br> 
+    Hello, I'm 
+    <span 
+      @mouseenter="showImage = true" 
+      @mouseleave="showImage = false" 
+      class="text-blue-600 relative cursor-pointer"
+    >
+      Dan
+      <!-- Hover Image -->
+      <div 
+        x-show="showImage" 
+        x-transition 
+        class="absolute -top-36 left-1/2 -translate-x-1/2 w-32 h-32 rounded-full border-4 border-white shadow-lg z-50"
+      >
+        <img 
+          src="/icon/dan.jpg" 
+          alt="Dan Hover Image" 
+          class="w-full h-full object-cover rounded-full"
+        >
+      </div>
+    </span>
+    <br> 
     a <span class="text-red-600">
       <span 
-        class="text-blue-300 inline-block cursor-pointer"
+        class="text-red-600 inline-block cursor-pointer"
         @mouseenter="message = 'Tailwind CSS'; show = true; $nextTick(() => x = $event.target.offsetLeft)" 
         @mouseleave="show = false"
       >T</span><span 
-        class="text-blue-500 inline-block cursor-pointer"
+        class="text-red-600 inline-block cursor-pointer"
         @mouseenter="message = 'Alpine.js'; show = true; $nextTick(() => x = $event.target.offsetLeft)" 
         @mouseleave="show = false"
       >A</span><span 
@@ -38,7 +58,7 @@
         @mouseenter="message = 'Laravel'; show = true; $nextTick(() => x = $event.target.offsetLeft)" 
         @mouseleave="show = false"
       >L</span><span 
-        class="text-pink-400 inline-block cursor-pointer"
+        class="text-red-600 inline-block cursor-pointer"
         @mouseenter="message = 'Livewire'; show = true; $nextTick(() => x = $event.target.offsetLeft)" 
         @mouseleave="show = false"
       >L</span> Stack Developer
