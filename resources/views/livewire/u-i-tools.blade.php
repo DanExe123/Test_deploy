@@ -43,7 +43,31 @@
     <!-- Grid Container (3 Columns) -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6" data-aos-duration="3000" data-aos="fade-up">
 
-          <!-- Alpine.js Flip Card -->
+             <!-- PHOSHPOR Flip Card -->
+             <div x-data="{ flipped: false }" 
+             @mouseenter="flipped = true" 
+             @mouseleave="flipped = false" 
+             class="relative w-full h-64 perspective">
+            <div class="w-full h-full transition-transform duration-500 transform-style-3d"
+                 :class="{ 'rotate-y-180': flipped }">
+                 
+           <!-- Tool 1 -->
+           <div class="mockup-browser bg-base-300 border">
+               <div class="mockup-browser-toolbar">
+                   <div class="input text-black">https://phosphoricons.com/?weight=bold</div>
+               </div>
+               <div class="bg-base-200 flex justify-center">
+                   <img 
+                       src="/icon/test.jpg" 
+                       alt="Tailwind CSS" 
+                       class="max-w-full h-auto rounded-lg shadow-lg"
+                   >
+               </div>
+           </div>
+       </div>
+   </div>
+       
+        <!-- Alpine.js Flip Card -->
           <div x-data="{ flipped: false }" 
           @mouseenter="flipped = true" 
           @mouseleave="flipped = false" 
@@ -58,7 +82,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/tailwindcssbrowser.PNG" 
+                    src="/icon/tailwindcssbrowser.png" 
                     alt="Tailwind CSS" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -81,7 +105,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/freepikbrowser.PNG" 
+                    src="/icon/freepikbrowser.png" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -103,7 +127,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/aosbrowserbrowser.PNG" 
+                    src="/icon/aosbrowserbrowser.png" 
                     alt="Livewire" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -126,7 +150,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/daisyuibrowser.PNG" 
+                    src="/icon/daisyuibrowser.png" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -148,7 +172,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/splinebrowser.PNG" 
+                    src="/icon/splinebrowser.png" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -171,7 +195,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/heroiconsbrowser.PNG" 
+                    src="/icon/heroiconsbrowser.png" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -195,7 +219,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/livewirebrowser.PNG" 
+                    src="/icon/livewirebrowser.png" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -218,7 +242,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/penguinuibrowser.PNG" 
+                    src="/icon/penguinuibrowser.png" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -241,7 +265,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/getwavesbrowser.PNG" 
+                    src="/icon/getwavesbrowser.png" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -264,7 +288,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/lottiefilesbrowser.PNG" 
+                    src="/icon/lottiefilesbrowser.png" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >

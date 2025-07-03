@@ -1,4 +1,4 @@
-<div class="relative flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gray-900 text-white px-6">
+<div x-cloak class="relative flex flex-col lg:flex-row items-center justify-center min-h-screen bg-gray-900 text-white px-6">
 
     {{-- Floating Back Arrow --}}
     <a wire:navigate.prevent href="{{ route('home') }}" class="absolute top-6 left-6 bg-gray-800 text-white p-3 rounded-full shadow-md transition hover:bg-gray-700 hover:scale-110"data-aos-duration="3000"  data-aos="fade-right">
@@ -24,20 +24,26 @@
     </div>
 
     {{-- About Me Content --}}
-    <div class="max-w-2xl space-y-6" data-aos-duration="3000"  data-aos="fade-up">
+    <div x-cloak class="max-w-2xl space-y-6" data-aos-duration="3000"  data-aos="fade-up">
         <h2 class="text-4xl font-bold text-red-700">Hey, I'm Dan Fred P Cablas</h2>
+
         <p class="text-gray-300 leading-relaxed">
-            I'm a Laravel developer currently studying at <strong>STI WEST NEGROS UNIVERSITY</strong>
+            I'm a Tall Stack developer currently studying at <strong>STI WEST NEGROS UNIVERSITY</strong>.
         </p>
+    
         <p class="text-gray-300 leading-relaxed">
             I started learning Laravel by watching tutorials and with the guidance of my teacher, who helped me understand how to become a better Laravel developer. Through hands-on practice, I improved my problem-solving skills, especially in handling logical operations and database management. 
         </p>
+    
         <p class="text-gray-300 leading-relaxed">
             One of the most important lessons I’ve learned in Laravel is to <strong>follow best practices</strong>, such as using Eloquent relationships efficiently, structuring controllers properly, and optimizing queries for performance. Debugging and troubleshooting became easier as I worked on real-world projects, and I developed a mindset of <strong>writing clean, maintainable code</strong>. My advice to aspiring Laravel developers is to <strong>build small projects first</strong>, explore Laravel’s documentation, and never stop learning.
         </p>
-
+    
+        <p class="text-gray-300 leading-relaxed">
+            I started learning the TALL Stack during my internship at <strong>DevTem Outsourcing Inc</strong>, an e-commerce development company. It was a valuable experience where I gained real-world exposure, learned practical techniques, and strengthened my development skills by contributing to actual projects. I'm truly grateful for the opportunity.
+        </p>
         {{-- Fun Facts (Toggle with Animation) --}}
-        <div x-data="{ show: false }" class="mt-4">
+        <div x-cloak x-data="{ show: false }" class="mt-4"
             <button @click="show = !show" class="bg-gray-800 px-5 py-2 rounded-md shadow-md transition hover:bg-gray-700">
                 Fun Facts About Me
             </button>
@@ -50,7 +56,7 @@
                  class="mt-3 space-y-2 text-gray-400 bg-gray-800 p-4 rounded-md shadow-lg border-l-4 border-red-700">
                 <p class="flex items-center gap-2"><span class="text-red-500 text-xl">🔥</span> I love open-source contributions.</p>
                 <p class="flex items-center gap-2"><span class="text-yellow-500 text-xl">🚀</span> I build things that make life easier.</p>
-                <p class="flex items-center gap-2"><span class="text-blue-500 text-xl">🎨</span> Passionate about front-end, back-end, and UI/UX development.</p>
+                <p class="flex items-center gap-2"><span class="text-blue-500 text-xl">🎨</span> Passionate about front-end, back-end.</p>
             </div>
         </div>
     </div>

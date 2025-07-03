@@ -20,13 +20,42 @@
         }
     </style>
 
+<!-- content -->
+<div x-data="{ message: '', show: false, x: 0 }" class="relative inline-block">
+  <h1 class="text-6xl font-extrabold">
+    Hello, I'm Dan <br> 
+    a <span class="text-red-600">
+      <span 
+        class="text-blue-300 inline-block cursor-pointer"
+        @mouseenter="message = 'Tailwind CSS'; show = true; $nextTick(() => x = $event.target.offsetLeft)" 
+        @mouseleave="show = false"
+      >T</span><span 
+        class="text-blue-500 inline-block cursor-pointer"
+        @mouseenter="message = 'Alpine.js'; show = true; $nextTick(() => x = $event.target.offsetLeft)" 
+        @mouseleave="show = false"
+      >A</span><span 
+        class="text-red-600 inline-block cursor-pointer"
+        @mouseenter="message = 'Laravel'; show = true; $nextTick(() => x = $event.target.offsetLeft)" 
+        @mouseleave="show = false"
+      >L</span><span 
+        class="text-pink-400 inline-block cursor-pointer"
+        @mouseenter="message = 'Livewire'; show = true; $nextTick(() => x = $event.target.offsetLeft)" 
+        @mouseleave="show = false"
+      >L</span> Stack Developer
+    </span>
+  </h1>
+  
+  <!-- Tooltip -->
+  <div 
+    x-show="show" 
+    x-transition 
+    class="absolute text-sm bg-black text-white rounded px-2 py-1 shadow-lg whitespace-nowrap"
+    :style="`top: 100%; left: ${x}px`" 
+    x-text="message"
+  ></div>
+</div>
 
-    <!-- content -->
-    <h1 class="text-6xl font-extrabold">
-        <i class="fa-solid fa-laptop-code text-blue-400"></i> 
-        Hello, I'm Dan <br> 
-        a <span class="text-red-600">Laravel Developer</span>
-    </h1>
+    
     
     <p class="text-2xl text-gray-300">
         <i class="fa-solid fa-code text-cyan-400"></i> Passionate about building modern & scalable web applications.
