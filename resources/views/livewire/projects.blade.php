@@ -44,26 +44,57 @@
            <button @click="category = 'uiux'" class="px-4 py-2 mx-2 bg-gray-800 rounded-md transition hover:bg-gray-700">UI/UX</button>
 
            <!-- Projects Grid -->
-           <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-               <template x-for="project in projects" :key="project.id">
-                   <div 
-                       x-show="category === 'all' || category === project.category"
-                       x-transition:enter="transition ease-out duration-500 transform"
-                       x-transition:enter-start="opacity-0 translate-y-10"
-                       x-transition:enter-end="opacity-100 translate-y-0"
-                       class="relative bg-gray-800 p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-2xl">
-                       
-                       <!-- Project Image -->
-                       <img :src="project.image" alt="" class="w-full h-40 object-cover rounded-md" >
+           <!-- Projects Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+    <template x-for="project in projects" :key="project.id">
+        <div 
+            x-show="category === 'all' || category === project.category"
+            x-data="{ currentImage: 0 }"
+            x-transition:enter="transition ease-out duration-500 transform"
+            x-transition:enter-start="opacity-0 translate-y-10"
+            x-transition:enter-end="opacity-100 translate-y-0"
+            class="relative bg-gray-800 p-4 rounded-lg shadow-lg transition transform hover:scale-105 hover:shadow-2xl"
+        >
 
-                       <!-- Project Info -->
-                       <h3 class="text-xl font-semibold mt-4" x-text="project.name"></h3>
-                       <p class="text-gray-400 text-sm" x-text="project.description"></p>
+            <!-- Conditional Image or Image Slider -->
+            <template x-if="Array.isArray(project.image)">
+                <div class="relative">
+                    <template x-for="(img, index) in project.image" :key="index">
+                        <img 
+                            x-show="currentImage === index" 
+                            :src="img" 
+                            alt="" 
+                            class="w-full h-40 object-cover rounded-md transition duration-300"
+                            x-transition:enter="transition ease-out duration-300"
+                            x-transition:enter-start="opacity-0"
+                            x-transition:enter-end="opacity-100"
+                        >
+                    </template>
 
-                      
-                   </div>
-               </template>
-           </div>
+                    <!-- Prev & Next Buttons -->
+                    <button 
+                        @click="currentImage = (currentImage - 1 + project.image.length) % project.image.length"
+                        class="absolute top-1/2 left-2 transform -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white px-2 py-1 rounded-full text-lg"
+                    >‹</button>
+                    <button 
+                        @click="currentImage = (currentImage + 1) % project.image.length"
+                        class="absolute top-1/2 right-2 transform -translate-y-1/2 bg-gray-700 bg-opacity-70 text-white px-2 py-1 rounded-full text-lg"
+                    >›</button>
+                </div>
+            </template>
+
+            <template x-if="!Array.isArray(project.image)">
+                <img :src="project.image" alt="" class="w-full h-40 object-cover rounded-md">
+            </template>
+
+            <!-- Project Info -->
+            <h3 class="text-xl font-semibold mt-4" x-text="project.name"></h3>
+            <p class="text-gray-400 text-sm" x-text="project.description"></p>
+
+        </div>
+    </template>
+</div>
+
        </div>
    </div>
 </div>
@@ -112,6 +143,20 @@
                image: '/icon/kodigu.jpg', // Placeholder for unavailable image
                link: '#' 
            },
+
+           {
+            id: 10,
+            name: 'Internship Task At DevTeam Outsourcing inc.',
+            category: 'laravel',
+            description: 'This task was passed through QA testing and code review with senior developers during my internship.',
+            image: [
+                '/icon/interntask1.PNG',
+                '/icon/task2.png',
+                '/icon/interntask2.png'
+            ],
+            link: '#'
+        }
+
            
           
            ],
