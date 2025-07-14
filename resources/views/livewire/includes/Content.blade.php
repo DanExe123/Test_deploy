@@ -1,8 +1,9 @@
 
-    <div class="absolute top-0 left-0 w-full h-full overflow-hidden">
-        <div class="cloud absolute top-5 left-1/4 w-32 h-20 bg-white opacity-70 rounded-full blur-lg animate-cloud-move"></div>
-        <div class="cloud absolute top-20 left-1/2 w-40 h-24 bg-white opacity-60 rounded-full blur-lg animate-cloud-move"></div>
-        <div class="cloud absolute top-30 left-3/4 w-36 h-22 bg-white opacity-50 rounded-full blur-lg animate-cloud-move"></div>  
+    <div class="absolute top-10 left-0 w-full h-full overflow-hidden">
+      <div class="cloud absolute top-[60px] left-3/4 w-40 h-24 bg-white opacity-60 rounded-full blur-lg animate-cloud-move"></div>
+      
+      <div class="cloud absolute top-40 left-1/2 w-40 h-24 bg-white opacity-60 rounded-full blur-lg animate-cloud-move"></div>
+        <div class="cloud absolute top-[80px] left-[85%] w-36 h-22 bg-white opacity-50 rounded-full blur-lg animate-cloud-move"></div>  
     </div>
     <div class="space-y-6" data-aos-duration="3000"  data-aos="fade-up">
  
