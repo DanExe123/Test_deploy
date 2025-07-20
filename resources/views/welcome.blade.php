@@ -27,7 +27,64 @@
             <!-- Background Gradient Layer -->
             <div class="fixed inset-0 bg-gradient-to-b from-red-800 via-gray-900 to-black -z-10"></div>   <!-- Main Content -->
 
-
+            <div x-data="visitorTracker()" x-init="init()" class="p-4 fixed left-0 top-0 ">
+                <div class="flex justify-start gap-2">
+                <div x-data="{ show: false, message: '', x: 0 }" class="relative inline-block">
+                    <p class="text-white font-semibold flex justify-start gap-1">
+                        <span 
+                            class="text-red-600 inline-block cursor-pointer relative"
+                            @mouseenter="message = 'Recently viewed my portfolio'; show = true" 
+                            @mouseleave="show = false"
+                        >
+                            <x-phosphor.icons::bold.eye class="w-5 h-5 mt-0.5 text-white" />
+                           
+                
+                            <!-- Tooltip -->
+                            <div 
+                                x-show="show" 
+                                x-transition 
+                                class="absolute left-full top-1/2 transform -translate-y-1/2 ml-2
+                                       bg-gray-800 text-white text-xs rounded px-3 py-1 shadow z-50 whitespace-nowrap"
+                            >
+                                <span x-text="message"></span>
+                            </div>
+                        </span>
+                    </p>
+                </div>
+                <span x-text="visitorCount" class="text-[15px]"></span>
+            </div>
+              </div>
+         
+              <script>
+                function visitorTracker() {
+                  return {
+                    visitorCount: 0,
+                    visitedIPs: [],
+                    init() {
+                      // Load data from localStorage
+                      this.visitorCount = parseInt(localStorage.getItem('visitor_count')) || 0;
+                      this.visitedIPs = JSON.parse(localStorage.getItem('visited_ips') || '[]');
+              
+                      // Fetch visitor IP
+                      fetch('https://api.ipify.org?format=json')
+                        .then(response => response.json())
+                        .then(data => {
+                          const ip = data.ip;
+              
+                          if (!this.visitedIPs.includes(ip)) {
+                            this.visitedIPs.push(ip);
+                            this.visitorCount++;
+              
+                            // Save new data
+                            localStorage.setItem('visited_ips', JSON.stringify(this.visitedIPs));
+                            localStorage.setItem('visitor_count', this.visitorCount);
+                          }
+                        });
+                    }
+                  };
+                }
+              </script>
+              
         <section class="min-h-screen mt-40 px-4 sm:px-6 lg:px-8 space-y-10 w-full max-w-screen-xl mx-auto">  
             @include('livewire.includes.Content')
             {{--  @include('livewire.includes.floating-button')--}}
