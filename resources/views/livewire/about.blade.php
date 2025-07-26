@@ -28,7 +28,7 @@
         <h2 class="text-4xl font-bold text-red-700">Hey, I'm Dan Fred P Cablas</h2>
 
         <p class="text-gray-300 leading-relaxed">
-            I'm a Tall Stack developer currently studying at <strong>STI WEST NEGROS UNIVERSITY</strong>.
+            I'm a Tall Stack developer Graduated at <strong>STI WEST NEGROS UNIVERSITY</strong>.
         </p>
     
         <p class="text-gray-300 leading-relaxed">

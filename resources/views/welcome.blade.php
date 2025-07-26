@@ -25,7 +25,7 @@
          </head>
          <body class="text-white text-center relative">
             <!-- Background Gradient Layer -->
-            <div class="fixed inset-0 bg-gradient-to-b from-red-800 via-gray-900 to-black -z-10"></div>   <!-- Main Content -->
+            <div x-cloak class="fixed inset-0 bg-gradient-to-b from-red-800 via-gray-900 to-black -z-10"></div>   <!-- Main Content -->
 
             <div x-data="visitorTracker()" x-init="init()" class="p-4 fixed left-0 top-0 ">
                 <div class="flex justify-start gap-2">
@@ -87,9 +87,9 @@
               
         <section class="min-h-screen mt-40 px-4 sm:px-6 lg:px-8 space-y-10 w-full max-w-screen-xl mx-auto">  
             @include('livewire.includes.Content')
-            {{--  @include('livewire.includes.floating-button')--}}
+          
             
-            @include('livewire.includes.navbar')
+          {{--  --}}  @include('livewire.includes.navbar')
             </div> 
             @include('livewire.includes.ButtonResources')
            

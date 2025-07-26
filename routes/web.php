@@ -9,10 +9,17 @@ use App\Http\Livewire\Contact;
 use App\Http\Livewire\MyResources;
 use App\Http\Livewire\AlpineLivewirepage;
 use App\Http\Livewire\UITools;
+use App\Http\Livewire\Profileclone;
 
-Route::get('/', function () {
+
+// Set Profileclone as the default homepage
+Route::get('/', Profileclone::class)->name('profileclone');
+
+// Optional: Keep /MyJourney for the welcome page
+Route::get('/MyJourney', function () {
     return view('welcome');
 })->name('home');
+
 
 Route::view('dashboard', 'dashboard')
     ->middleware(['auth', 'verified'])
@@ -29,6 +36,7 @@ Route::view('dashboard', 'dashboard')
                 Route::get('/my-resources', MyResources::class)->name('my-resources');
                 Route::get('/alpine-livewirepage', AlpineLivewirepage::class)->name('alpine-livewirepage');
                 Route::get('/u-i-tools', UITools::class)->name('u-i-tools');
+                Route::get('/DanfredProfile', Profileclone::class)->name('profileclone');
 
 
 

@@ -84,36 +84,4 @@
     </div>
 
 
-    <div x-data="{ open: false, showMessage: true }" class="fixed top-1/2 left-6 transform -translate-y-1/2" data-aos-duration="3000"  data-aos="fade-right">
-        <!-- Message with Smooth Transition -->
-        <div wire:ignore 
-        x-show="showMessage && !open" 
-        x-transition.opacity.duration.500ms
-        class="absolute mb-2 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-gray-900 text-white text-sm px-6 py-3 rounded-2xl shadow-lg flex items-center space-x-2 relative bubble-animation">
-
-    <span class=" text-white  font-bold" >Hey! Click me!</span>
-
-    <!-- Chat Bubble Tail -->
-    <div class="absolute -bottom-2 right-1/2 -translate-x-1/2 w-4 h-4 bg-gray-900 rotate-45"></div>
-    </div>
-
-    <style>
-    /* Soft Glow Effect */
-    .bubble-animation {
-        animation: glow 2s infinite alternate;
-    }
-
-    @keyframes glow {
-        0% { box-shadow: 0px 0px 8px rgba(0, 172, 255, 0.5); }
-        100% { box-shadow: 0px 0px 16px rgba(0, 172, 255, 0.8); }
-    }
-    </style>
-
-    <div class="mb-10">
-        <button @click="open = !open" 
-        class="w-16 h-16 rounded-full shadow-lg focus:outline-none transition bg-white flex items-center justify-center">
-      <img src="/icon/man-wearing-baseball-cap-icon-600nw-530829364.webp" alt="Menu" class="w-10 h-10 rounded-full object-cover">
-      </button></div
-
-
-      
+   
