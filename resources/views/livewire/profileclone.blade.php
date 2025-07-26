@@ -193,7 +193,7 @@
             <h2 class="font-semibold text-lg">Projects</h2>
           
             <div class="grid grid-cols-3 gap-2 mt-2">
-              <template x-for="src in ['/icon/Capture.PNG', '/icon/chomehearts.PNG', '/icon/ecommerce.PNG', '/icon/abouts.png' ,'/icon/bplks.jpg', '/icon/kodigu.jpg', '/icon/inventory.jpg' ]" :key="src">
+              <template x-for="src in ['/icon/Capture.PNG', '/icon/chomehearts.PNG', '/icon/ecommerce.PNG', '/icon/abouts.PNG' ,'/icon/bplks.jpg', '/icon/kodigu.jpg', '/icon/inventory.jpg' ]" :key="src">
                 <img 
                   :src="src" 
                   @click="imageSrc = src; showModal = true" 
@@ -438,7 +438,7 @@
 
                  <!-- Project 3 -->
                  <div class="text-center">
-                    <img src="/icon/interntask.png" alt="Digital Complaint Filing System" class="rounded-lg shadow-md w-full h-48 object-cover transition-transform duration-300 transform hover:scale-110">
+                    <img src="/icon/interntask.PNG" alt="Digital Complaint Filing System" class="rounded-lg shadow-md w-full h-48 object-cover transition-transform duration-300 transform hover:scale-110">
                 </div>
                   <!-- Project 3 -->
                   <div class="text-center">
