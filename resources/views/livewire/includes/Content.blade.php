@@ -20,10 +20,9 @@
             animation: cloud-move 20s linear infinite;
         }
     </style>
-
 <!-- content -->
 <div x-data="{ message: '', show: false, x: 0, showImage: false }" class="relative inline-block">
-  <h1 class="text-6xl font-extrabold">
+  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold">
     Hello, I'm 
     <span 
       @mouseenter="showImage = true" 
@@ -76,11 +75,9 @@
   ></div>
 </div>
 
-    
-    
-    <p class="text-2xl text-gray-300">
-        <i class="fa-solid fa-code text-cyan-400"></i> Passionate about building modern & scalable web applications.
-    </p>
+<p class="text-base sm:text-lg md:text-xl lg:text-2xl text-gray-300 mt-4">
+  <i class="fa-solid fa-code text-cyan-400"></i> Passionate about building modern & scalable web applications.
+</p>
     </div>
 
 

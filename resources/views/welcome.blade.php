@@ -87,9 +87,6 @@
               
         <section class="min-h-screen mt-40 px-4 sm:px-6 lg:px-8 space-y-10 w-full max-w-screen-xl mx-auto">  
             @include('livewire.includes.Content')
-          
-            
-          {{--  --}}  @include('livewire.includes.navbar')
             </div> 
             @include('livewire.includes.ButtonResources')
            
@@ -98,38 +95,39 @@
         </div>
         </section>
 
-            <section class="py-16 text-center" data-aos="fade-up"  data-aos-duration="3000">
-                <h2 class="text-4xl font-bold text-white mb-4">Scroll to Explore My Journey</h2>
-                <p class="text-gray-300 text-lg">Discover my journey, experience, and what I love building.</p> 
-            </section>
-            
-
-            <section class="py-16">
-                <div class="max-w-screen-xl 2xl:max-w-screen-3xl px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-16 h-svh flex flex-col justify-center">
-              
-               <!-- ✅ Image Row -->
-            <div class="flex flex-col sm:flex-row gap-4 mx-auto" data-aos="zoom-in-up" data-aos-duration="3000">
-                <a href="#_">
-                    <img src="/icon/11.jpg"
-                        class="w-64 h-64 rounded-xl rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 object-cover hover:scale-150 transform origin-bottom"
-                        alt="Internship photo 1" />
-                </a>
-                <a href="#_">
-                    <img src="/icon/devteam.jpg"
-                        class="w-64 h-64 rounded-xl -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 object-cover hover:scale-150 transform origin-bottom"
-                        alt="Internship photo 2" />
-                </a>
-                <a href="#_">
-                    <img src="/icon/devteam1.jpg"
-                        class="w-64 h-64 rounded-xl rotate-6 hover:rotate-0 duration-500 hover:-translate-y-12 object-cover hover:scale-150 transform origin-bottom"
-                        alt="Internship photo 3" />
-                </a>
-                <a href="#_">
-                    <img src="/icon/devteam2.jpg"
-                        class="w-64 h-64 rounded-xl -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-12 object-cover hover:scale-150 transform origin-bottom"
-                        alt="Internship photo 4" />
-                </a>
-            </div>
+        <section class="py-16 text-center" data-aos="fade-up" data-aos-duration="3000">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4">Scroll to Explore My Journey</h2>
+          <p class="text-gray-300 text-sm sm:text-base md:text-lg">Discover my journey, experience, and what I love building.</p> 
+      </section>
+      
+      <section class="py-16">
+          <div class="max-w-screen-xl 2xl:max-w-screen-3xl px-4 sm:px-8 md:px-12 mx-auto py-12 lg:py-24 space-y-16 h-auto flex flex-col justify-center">
+              <!-- ✅ Image Row -->
+              <div class="flex flex-wrap justify-center items-center gap-4 mx-auto" data-aos="zoom-in-up" data-aos-duration="3000">
+                  <a href="#_">
+                      <img src="/icon/11.jpg"
+                          class="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-xl rotate-6 hover:rotate-0 duration-500 hover:-translate-y-6 md:hover:-translate-y-12 object-cover hover:scale-125 transform origin-bottom"
+                          alt="Internship photo 1" />
+                  </a>
+                  <a href="#_">
+                      <img src="/icon/devteam.jpg"
+                          class="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-xl -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-6 md:hover:-translate-y-12 object-cover hover:scale-125 transform origin-bottom"
+                          alt="Internship photo 2" />
+                  </a>
+                  <a href="#_">
+                      <img src="/icon/devteam1.jpg"
+                          class="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-xl rotate-6 hover:rotate-0 duration-500 hover:-translate-y-6 md:hover:-translate-y-12 object-cover hover:scale-125 transform origin-bottom"
+                          alt="Internship photo 3" />
+                  </a>
+                  <a href="#_">
+                      <img src="/icon/devteam2.jpg"
+                          class="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-xl -rotate-12 hover:rotate-0 duration-500 hover:-translate-y-6 md:hover:-translate-y-12 object-cover hover:scale-125 transform origin-bottom"
+                          alt="Internship photo 4" />
+                  </a>
+              </div>
+          </div>
+      </section>
+      
 
 
                     <!-- ✅ Caption / Description -->

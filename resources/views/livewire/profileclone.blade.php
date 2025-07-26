@@ -1,4 +1,4 @@
-<div class="bg-white px-10" x-cloak>
+<div class="bg-white px-0 md:px-10" x-cloak>
     <div class="relative w-full h-99 bg-cover bg-center bg-no-repeat  bg-[url('/icon/bgphoto.jpg')] rounded-b-lg mb-5 px-5 pb-5  ">
         <div class="absolute inset-0 bg-black/60 rounded-lg"></div>
         <!-- Cover edit button -->
