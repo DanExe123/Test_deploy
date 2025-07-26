@@ -130,43 +130,50 @@
       
 
 
-                    <!-- ✅ Caption / Description -->
-                    <div class="text-center max-w-3xl mx-auto space-y-6" data-aos="fade-up" data-aos-duration="3000">
-                        <div class="flex items-center justify-center">
-                            <h2 class="text-4xl font-bold flex items-center gap-2 flex-wrap">
-                                <span class="flex items-center gap-2 justify-center">
-                                    <x-phosphor.icons::bold.instagram-logo class="w-8 h-8 mt-2" />    Internship
-                                </span>
-                                Experience at DevTeam Outsourcing
-                            </h2>
-                            
-                        </div>                        
-                        <p class="text-gray-300 text-lg leading-relaxed">
-                          These photos were taken during my internship at <strong>DevTeam Outsourcing inc.</strong>. I truly enjoyed the experience — I got to work on real-world projects and grow as a developer. 
-                          Our senior developers were very supportive, guiding me in proper code structure, teamwork, and task management. I learned how to collaborate, meet deadlines, and write clean, efficient code.
-                          <br /><br />
-                          I'm very grateful for the opportunity, as it helped me enhance not only my technical skills, but also my confidence and professionalism in a real development environment.
-                        </p>
-                      </div>
-                </div>
-              </section>
+                <!-- ✅ Caption / Description Section -->
+<section class="py-16 px-4 sm:px-6 lg:px-0">
+  <div class="text-center max-w-3xl mx-auto space-y-6" data-aos="fade-up" data-aos-duration="3000">
+      <div class="flex items-center justify-center flex-wrap">
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold flex items-center gap-2 text-white text-center">
+            Intership Experience at DevTeam Outsourcing
+          </h2>
+      </div>
+      <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed text-justify sm:text-center">
+          These photos were taken during my internship at <strong>DevTeam Outsourcing Inc.</strong>.
+          I truly enjoyed the experience — I got to work on real-world projects and grow as a developer.
+          Our senior developers were very supportive, guiding me in proper code structure, teamwork, and task management.
+          I learned how to collaborate, meet deadlines, and write clean, efficient code.
+          <br /><br />
+          I'm very grateful for the opportunity, as it helped me enhance not only my technical skills,
+          but also my confidence and professionalism in a real development environment.
+      </p>
+  </div>
+</section>
 
-              <section class="py-16">
-              <!-- ✅ Additional Caption / Description -->
-            <div class="text-center max-w-3xl mx-auto space-y-6" data-aos="fade-up" data-aos-duration="3000">
-                <h3 class="text-2xl font-semibold text-white flex justify-center gap-2 mt-1 "> 
-                         <span class="flex items-center gap-2 justify-center">
-                     <x-phosphor.icons::bold.ticket class="w-8 h-8" />
-                    </span> My Internship Tasks & Highlights</h3>
-                <p class="text-gray-300 text-lg leading-relaxed">
-                    During this internship, my primary task was to implement <strong>User Access Control</strong>. After that, I shifted to frontend development where I focused on building reusable <strong>global components</strong> that my teammates could easily integrate across the app — helping improve consistency and optimize our codebase.
-                    <br /><br />
-                    One of my proudest accomplishments was developing a dynamic <strong>dashboard</strong> that displayed user data based on roles such as Super Admin , HR Admin,  Manager , Employee. I also built a <strong>Google Forms-inspired UI</strong> with a rich text editor — all <strong>from scratch</strong>, without using any external UI libraries. Everything was constructed using my own reusable components.
-                    <br /><br />
-                    This was a <strong>solid, hands-on experience</strong> that not only enhanced my frontend skills but also taught me how to deliver QA-ready features efficiently and independently.
-                </p>
-            </div>
-            </section>
+<!-- ✅ Additional Caption / Description Section -->
+<section class="py-16 px-4 sm:px-6 lg:px-0">
+  <div class="text-center max-w-3xl mx-auto space-y-6" data-aos="fade-up" data-aos-duration="3000">
+      <h3 class="text-xl sm:text-2xl md:text-3xl font-semibold text-white flex justify-center gap-2 mt-1">
+          <span class="flex items-center gap-2 justify-center">
+              My Internship Tasks & Highlights
+          </span>
+      </h3>
+      <p class="text-gray-300 text-sm sm:text-base md:text-lg leading-relaxed text-justify sm:text-center">
+          During this internship, my primary task was to implement <strong>User Access Control</strong>.
+          After that, I shifted to frontend development where I focused on building reusable
+          <strong>global components</strong> that my teammates could easily integrate across the app — helping improve consistency and optimize our codebase.
+          <br /><br />
+          One of my proudest accomplishments was developing a dynamic <strong>dashboard</strong> that displayed user data
+          based on roles such as Super Admin, HR Admin, Manager, and Employee. I also built a <strong>Google Forms-inspired UI</strong>
+          with a rich text editor — all <strong>from scratch</strong>, without using any external UI libraries.
+          Everything was constructed using my own reusable components.
+          <br /><br />
+          This was a <strong>solid, hands-on experience</strong> that not only enhanced my frontend skills
+          but also taught me how to deliver QA-ready features efficiently and independently.
+      </p>
+  </div>
+</section>
+
 
            <!-- Make sure Alpine.js is included in your <head> -->
 
