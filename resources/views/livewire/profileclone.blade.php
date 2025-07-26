@@ -74,8 +74,8 @@
   
         <!-- Following Icons -->
         <div class="flex mt-2 flex-wrap gap-2 justify-center lg:justify-start" x-show="tab === 'follow'">
-          <img class="w-50 h-20 rounded-lg border-2 border-white object-cover transition-transform duration-300 transform hover:scale-110"  src="/icon/following1.png" alt="Composer" title="laravel daily" />
-          <img class="w-70 h-20 rounded-lg border-2 border-white object-cover transition-transform duration-300 transform hover:scale-110"  src="/icon/following2.png" alt="Composer" title="freecodecamp" />
+          <img class="w-50 h-20 rounded-lg border-2 border-white object-cover transition-transform duration-300 transform hover:scale-110"  src="/icon/following1.PNG" alt="Composer" title="laravel daily" />
+          <img class="w-70 h-20 rounded-lg border-2 border-white object-cover transition-transform duration-300 transform hover:scale-110"  src="/icon/following2.PNG" alt="Composer" title="freecodecamp" />
         </div>
       </div>
     </div>
