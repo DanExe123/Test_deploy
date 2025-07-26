@@ -532,7 +532,7 @@
                     { id: 1, name: 'POS and Inventory', category: 'ReactNative', description: 'POS System', image: '/icon/Capture.PNG' },
                     { id: 2, name: 'Chrome Hearts Shop', category: 'laravel', description: 'Shop', image: '/icon/chomehearts.PNG' },
                     { id: 3, name: 'E-commerce System', category: 'laravel', description: 'E-commerce', image: '/icon/ecommerce.PNG' },
-                    { id: 4, name: 'Digital Vet System', category: 'laravel', description: 'Vet system', image: '/icon/abouts.png' },
+                    { id: 4, name: 'Digital Vet System', category: 'laravel', description: 'Vet system', image: '/icon/abouts.PNG' },
                     { id: 5, name: 'ThriftShopBCD', category: 'laravel', description: 'Thrift Shop', image: '/icon/bplks.jpg' },
                     { id: 6, name: 'FinTrack', category: 'laravel', description: 'Finance tracker', image: '/icon/unavailable-rubber-grunge-stamp-seal-illustration-vector.jpg' },
                     { id: 7, name: 'More Items', category: 'laravel', description: 'Extra', image: '/icon/kodigu.jpg' },
