@@ -82,7 +82,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/tailwindcssbrowser.png" 
+                    src="/icon/tailwindcssbrowser.PNG" 
                     alt="Tailwind CSS" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -105,7 +105,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/freepikbrowser.png" 
+                    src="/icon/freepikbrowser.PNG" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -127,7 +127,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/aosbrowserbrowser.png" 
+                    src="/icon/aosbrowserbrowser.PNG" 
                     alt="Livewire" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -150,7 +150,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/daisyuibrowser.png" 
+                    src="/icon/daisyuibrowser.PNG" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -172,7 +172,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/splinebrowser.png" 
+                    src="/icon/splinebrowser.PNG" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -195,7 +195,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/heroiconsbrowser.png" 
+                    src="/icon/heroiconsbrowser.PNG" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -219,7 +219,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/livewirebrowser.png" 
+                    src="/icon/livewirebrowser.PNG" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -242,7 +242,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/penguinuibrowser.png" 
+                    src="/icon/penguinuibrowser.PNG" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -265,7 +265,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/getwavesbrowser.png" 
+                    src="/icon/getwavesbrowser.PNG" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
@@ -288,7 +288,7 @@
             </div>
             <div class="bg-base-200 flex justify-center">
                 <img 
-                    src="/icon/lottiefilesbrowser.png" 
+                    src="/icon/lottiefilesbrowser.PNG" 
                     alt="Laravel" 
                     class="max-w-full h-auto rounded-lg shadow-lg"
                 >
