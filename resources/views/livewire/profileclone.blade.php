@@ -1,227 +1,40 @@
 <div class="bg-white px-0 md:px-10" x-cloak>
-    <div class="relative w-full h-99 bg-cover bg-center bg-no-repeat  bg-[url('/icon/bgphoto.jpg')] rounded-b-lg mb-5 px-5 pb-5  ">
-        <div class="absolute inset-0 bg-black/60 rounded-lg"></div>
-        <!-- Cover edit button -->
-        <div class="absolute bottom-2 right-4">
-          <button class="bg-white text-sm px-3 py-1 rounded-lg shadow text-gray-700 border border-gray-300">
-          <span class="flex justify-start gap-2 py-1 font-bold"> 
-            <x-phosphor.icons::bold.camera class="w-5 h-5 text-black" />
-            My cover photo
-        </span>
-          </button>
-        </div>
-      </div>
+   @include('livewire.includes.cover-photo')
       
       <!-- Profile section -->
-<div class="flex flex-col lg:flex-row items-center justify-between px-6 mt-[-4.5rem]">
-    <!-- Left: Profile Image & Name -->
-    <div class="flex flex-col lg:flex-row items-center lg:items-start lg:space-x-4 text-center lg:text-left w-full lg:w-auto">
-      
-      <!-- Profile photo -->
-      <div class="relative flex justify-center lg:justify-start w-full lg:w-auto">
-        <img src="/icon/dan.jpg" alt="Profile"
-          class="w-36 h-36 rounded-full border-4 border-white object-cover" />
-      </div>
-  
-      <!-- Alpine Tab Wrapper -->
-      <div x-data="{ tab: 'tech' }" class="mt-6 lg:mt-12" x-cloak>
-        <!-- Header -->
-        <h1 class="text-4xl font-bold py-2">Dan Fred</h1>
-  
-        <!-- Tabs -->
-        <div class="flex items-center justify-center lg:justify-start gap-4 text-sm text-gray-600 mb-2">
-          <button 
-            @click="tab = 'tech'" 
-            :class="{ 'font-bold text-black': tab === 'tech' }"
-          >
-            15 MyTechnologies
-          </button>
-          <button 
-            @click="tab = 'follow'" 
-            :class="{ 'font-bold text-black': tab === 'follow' }"
-          >
-            2 following
-          </button>
-        </div>
-  
-        <!-- Tech Icons -->
-        <div class="flex mt-2 flex-wrap justify-center lg:justify-start gap-1" x-show="tab === 'tech'">
-          <template x-for="icon in [
-            {src: '/icon/composer-removebg-preview.png', alt: 'Composer'},
-            {src: '/icon/vscode-removebg-preview.png', alt: 'VSCode'},
-            {src: '/icon/xamp-removebg-preview.png', alt: 'XAMPP'},
-            {src: '/icon/cmd-removebg-preview.png', alt: 'Command Prompt'},
-            {src: '/icon/git-removebg-preview.png', alt: 'Git'},
-            {src: '/icon/github-removebg-preview.png', alt: 'GitHub'},
-            {src: '/icon/postman-removebg-preview.png', alt: 'Postman'},
-            {src: '/icon/laravel-removebg-preview.png', alt: 'Laravel'},
-            {src: '/icon/tailwind-removebg-preview.png', alt: 'TailwindCSS'},
-            {src: '/icon/daisyui-removebg-preview.png', alt: 'DaisyUI'},
-            {src: '/icon/aos-removebg-preview.png', alt: 'AOS Animation'},
-            {src: '/icon/reactnative-removebg-preview.png', alt: 'React Native'},
-            {src: '/icon/livewire-removebg-preview.png', alt: 'Livewire'},
-            {src: '/icon/alpinejs-removebg-preview.png', alt: 'AlpineJS'},
-            {src: '/icon/php-removebg-preview.png', alt: 'PHP'}
-          ]" :key="icon.alt">
-            <img 
-              :src="icon.src" 
-              :alt="icon.alt"
-              :title="icon.alt"
-              class="w-8 h-8 rounded-full border-2 border-white object-contain bg-white transition-transform duration-300 transform hover:scale-110"
-            />
-          </template>
-        </div>
-  
-        <!-- Following Icons -->
-        <div class="flex mt-2 flex-wrap gap-2 justify-center lg:justify-start" x-show="tab === 'follow'">
-          <img class="w-50 h-20 rounded-lg border-2 border-white object-cover transition-transform duration-300 transform hover:scale-110"  src="/icon/following1.PNG" alt="Composer" title="laravel daily" />
-          <img class="w-70 h-20 rounded-lg border-2 border-white object-cover transition-transform duration-300 transform hover:scale-110"  src="/icon/following2.PNG" alt="Composer" title="freecodecamp" />
-        </div>
-      </div>
-    </div>
-  
-    <!-- Right: Buttons -->
-    <div class="flex space-x-2 mt-4 lg:mt-0">
-    <a href="{{ route('home') }}">
-      <button class="bg-blue-600 text-white text-sm px-4 py-2 rounded-lg font-medium shadow hover:bg-opacity-50 flex justify-start gap-2">
-        <x-phosphor.icons::bold.trophy class="w-5 h-5 text-white" />
-        My Journey</button></a>
-        <a href="{{ asset('icon/danfredcablasresume.pdf') }}" download>
-            <button class="bg-gray-200 text-sm px-4 py-2 rounded font-medium shadow text-gray-800 flex justify-start hover:bg-blue-600 gap-1">
-                <x-phosphor.icons::bold.download-simple class="w-5 h-5 text-black" />
-                CV
-            </button>
-        </a>        
-        <a href="https://github.com/DanExe123" target="_blank" rel="noopener noreferrer">
-            <button class="bg-gray-200 text-sm px-4 py-2 rounded font-medium shadow text-gray-800 flex items-center hover:bg-blue-600 gap-1">
-              <img class="w-5 h-5 rounded-lg object-cover" src="/icon/github-removebg-preview.png" alt="GitHub" title="GitHub" />
-              Github
-            </button>
-          </a>
-          
-    </div>
-  </div>
+   @include('livewire.includes.profile-section')
   
   <hr class="mx-12 mt-10">
 <!-- Alpine Tabs Wrapper -->
 <div x-data="{ tab: 'posts' }">
-
     <!-- Navigation Tabs -->
-    <div class="flex justify-center lg:justify-start px-6 mt-6 overflow-x-auto scrollbar-hide">
-      <nav class="flex space-x-6 text-gray-600 text-sm font-medium border-b w-full">
-        <button @click="tab = 'posts'" :class="tab === 'posts' ? 'pb-2 border-b-2 border-blue-600 text-blue-600' : 'pb-2 hover:text-blue-600 hover:border-b-2 hover:border-blue-600'">Posts</button>
-        <button @click="tab = 'about'" :class="tab === 'about' ? 'pb-2 border-b-2 border-blue-600 text-blue-600' : 'pb-2 hover:text-blue-600 hover:border-b-2 hover:border-blue-600'">About</button>
-        <button @click="tab = 'client'" :class="tab === 'client' ? 'pb-2 border-b-2 border-blue-600 text-blue-600' : 'pb-2 hover:text-blue-600 hover:border-b-2 hover:border-blue-600'">ClientProjects</button>
-        <button @click="tab = 'photos'" :class="tab === 'photos' ? 'pb-2 border-b-2 border-blue-600 text-blue-600' : 'pb-2 hover:text-blue-600 hover:border-b-2 hover:border-blue-600'">Photos</button>
-        <button @click="tab = 'personal'" :class="tab === 'personal' ? 'pb-2 border-b-2 border-blue-600 text-blue-600' : 'pb-2 hover:text-blue-600 hover:border-b-2 hover:border-blue-600'">MyPersonalProject</button>
-        <button @click="tab = 'internship'" :class="tab === 'internship' ? 'pb-2 border-b-2 border-blue-600 text-blue-600' : 'pb-2 hover:text-blue-600 hover:border-b-2 hover:border-blue-600'">Internship</button>
-      </nav>
-    </div>
-  
-    <!-- Grid Layout -->
+  @include('livewire.includes.profile-nav')
+      <!-- Grid Layout -->
     <div class="grid grid-cols-1 lg:grid-cols-4 gap-6 px-5 mt-6">
       
       <!-- Left Column -->
       <div class="col-span-1 space-y-6">
         <!-- Intro -->
-        <div class="bg-white p-4 rounded shadow">
-          <h2 class="font-bold text-lg">Intro</h2>
-          <p class="mt-2 text-[#050505] text-[15px] leading-snug font-normal">
-            This portfolio is inspired by the Facebook profile layout. Hello, I'm <span class="font-medium">Dan Fred</span>, a freshgrad with freelance web developer experienced. I gained real-world project experience during my internship at <span class="font-medium">DevTeam Outsourcing Inc.</span>
-          </p>
-          <div class="py-2">
-            <button class="bg-gray-200 text-black w-full text-sm px-4 py-2 rounded-lg font-medium shadow hover:bg-gray-300 flex justify-center gap-2">
-           Edit Bio
-            </button>
-          </div>
-          <div class="flex items-center gap-2 py-2">
-            <x-phosphor.icons::bold.suitcase-simple class="w-5 h-5 text-gray-500" />
-            <div class="flex items-baseline gap-1">
-              <span class="text-gray-700 font-medium">Internship:</span>
-              <span class="text-[#050505] text-[15px] leading-snug font-bold">DevTeamOutsourcing</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-2 py-2">
-            <x-phosphor.icons::bold.graduation-cap class="w-5 h-5 text-gray-500" />
-            <div class="flex items-baseline gap-1">
-              <span class="text-gray-700 font-medium">Went to:</span>
-              <span class="text-[#050505] text-[15px] leading-snug font-bold">STI WNU</span>
-            </div>
-          </div>
-          <div class="flex items-center gap-2 py-2">
-            <x-phosphor.icons::bold.house-line class="w-5 h-5 text-gray-500" />
-            <div class="flex items-baseline gap-1">
-              <span class="text-gray-700 font-medium">Lives in:</span>
-              <span class="text-[#050505] text-[15px] leading-snug font-bold">Bacolod City</span>
-            </div>
-          </div>
-                </div>
-  
-        <!-- Photos -->
-        <div x-data="{ showModal: false, imageSrc: '' }" class="bg-white p-4 rounded shadow relative">
-            <h2 class="font-semibold text-lg">Photos</h2>
-          
-            <div class="grid grid-cols-3 gap-2 mt-2">
-              <template x-for="src in ['/icon/dan.jpg', '/icon/devteam1.jpg', '/icon/devteam.jpg']" :key="src">
-                <img 
-                  :src="src" 
-                  @click="imageSrc = src; showModal = true" 
-                  class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80 transition" 
-                />
-              </template>
-            </div>
-          
-            <!-- Image Modal -->
-            <div 
-              x-show="showModal" 
-              x-transition 
-              class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-              @click.away="showModal = false"
-            >
-              <div class="max-w-3xl w-full px-4">
-                <img :src="imageSrc" class="w-full rounded shadow-lg border-4 border-white" />
-                <button 
-                  @click="showModal = false" 
-                  class="absolute top-4 right-4 text-white text-2xl font-bold"
-                >&times;</button>
-              </div>
-            </div>
-          </div>
+       @include('livewire.includes.profile-left-col')
 
-           <!-- Projects -->
-        <div x-data="{ showModal: false, imageSrc: '' }" class="bg-white p-4 rounded shadow relative">
-            <h2 class="font-semibold text-lg">Projects</h2>
-          
-            <div class="grid grid-cols-3 gap-2 mt-2">
-              <template x-for="src in ['/icon/Capture.PNG', '/icon/chomehearts.PNG', '/icon/ecommerce.PNG', '/icon/abouts.PNG' ,'/icon/bplks.jpg', '/icon/kodigu.jpg', '/icon/inventory.jpg' ]" :key="src">
-                <img 
-                  :src="src" 
-                  @click="imageSrc = src; showModal = true" 
-                  class="w-full h-20 object-cover rounded cursor-pointer hover:opacity-80 transition" 
-                />
-              </template>
-            </div>
-          
-            <!-- Image Modal -->
-            <div 
-              x-show="showModal" 
-              x-transition 
-              class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50"
-              @click.away="showModal = false"
-            >
-              <div class="max-w-3xl w-full px-4">
-                <img :src="imageSrc" class="w-full rounded shadow-lg border-4 border-white" />
-                <button 
-                  @click="showModal = false" 
-                  class="absolute top-4 right-4 text-white text-2xl font-bold"
-                >&times;</button>
-              </div>
-            </div>
-          </div>
+       <div class="text-sm text-gray-500  space-y-1">
+        <p>Inspired by FB Profile | Developed by Dan Fred</p>
+        <p>Powered by TALL Stack</p>
+      </div>
       </div>
   
+      <style>
+        .scrollbar-invisible::-webkit-scrollbar {
+          display: none;
+        }
+      
+        .scrollbar-invisible {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;     /* Firefox */
+        }
+      </style>
       <!-- Right Column -->
-      <div class="col-span-1 lg:col-span-3 space-y-4">
+      <div class="col-span-1 lg:col-span-3 space-y-4 overflow-y-auto max-h-screen scrollbar-invisible">
         <!-- Post Composer -->
         <div class="bg-white p-4 rounded shadow">
             <div class="flex justify-start gap-2">
@@ -452,7 +265,36 @@
         <div class="bg-white p-4 rounded shadow space-y-4">
             <h2 class="mt-2 font-bold text-gray-400">Pinned post</h2>
             <div x-data="projectGallery()" class="bg-white p-4 rounded shadow">
-                <p class="text-sm text-gray-500">Dan Fred · Posted album. June 2 2025</p>
+              <div class="flex items-center justify-start gap-2">
+                <img src="/icon/dan.jpg" alt="Profile"
+                     class="w-12 h-12 rounded-full border-4 border-white object-cover" />
+                <div>
+                  <h3 class="text-lg font-semibold">Dan Fred</h3>
+                  <div class="flex items-center gap-1 text-sm text-gray-500">
+                    <p>Posted album. June 2, 2025</p>
+              
+                    <!-- Tooltip with Alpine.js -->
+                    <div x-data="{ show: false }" class="relative ml-1">
+                      <x-phosphor.icons::bold.globe-hemisphere-east 
+                        class="w-4 h-4 text-gray-500 cursor-pointer"
+                        @mouseenter="show = true" 
+                        @mouseleave="show = false"
+                      />
+                      <div 
+                        x-show="show" 
+                        x-transition 
+                        class="absolute bottom-full mb-1 px-2 py-1 text-xs text-white bg-black rounded shadow-lg"
+                        style="white-space: nowrap;"
+                      >
+                        Public
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+                         
+              
             <h3 class="mt-2 font-bold text-lg">Album: ACHIEVEMENTS</h3>
             <p class="text-sm text-gray-500 mb-3">
                 This is my project journey that I built during my 3rd year, commission projects, client projects, personal website, and my internship tasks. It helped me a lot in problem-solving and understanding programming logic.
@@ -513,7 +355,176 @@
                   </div>
                 </div>
               </div>
-              
+
+              <div x-data="projectLike('post1Section')" class="bg-white p-4 rounded shadow">
+                <div class="flex items-center justify-start gap-2">
+                  <img src="/icon/dan.jpg" alt="Profile"
+                       class="w-12 h-12 rounded-full border-4 border-white object-cover" />
+                  <div>
+                    <h3 class="text-lg font-semibold">Dan Fred</h3>
+                    <div class="flex items-center gap-1 text-sm text-gray-500">
+                      <p>June 2, 2025</p>
+                
+                      <!-- Tooltip with Alpine.js -->
+                      <div x-data="{ show: false }" class="relative ml-1">
+                        <x-phosphor.icons::bold.globe-hemisphere-east 
+                          class="w-4 h-4 text-gray-500 cursor-pointer"
+                          @mouseenter="show = true" 
+                          @mouseleave="show = false"
+                        />
+                        <div 
+                          x-show="show" 
+                          x-transition 
+                          class="absolute bottom-full mb-1 px-2 py-1 text-xs text-white bg-black rounded shadow-lg"
+                          style="white-space: nowrap;"
+                        >
+                          Public
+                        </div>
+                      </div>
+                
+                    </div>
+                  </div>
+                </div>
+                
+                <p class="text-gray-700 mb-4">
+                  This picture showcases one of my tasks during my internship at DevTeam.
+I was responsible for translating UI/UX designs into functional front-end code, which significantly enhanced my skills in responsive design and user interface development. I also gained valuable experience in quality assurance (QA), where I cross-checked the system for bugs and layout inconsistencies to ensure a polished final product </p>
+                  
+            <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+                <!-- Project 1 -->
+                <div class="text-center">
+                  <img src="/icon/interntask.PNG" 
+                       alt="A simple THRIFTSHOPBCD using DaisyUi Tailwind Laravel"
+                       class="rounded-lg shadow-md max-w-sm h-auto object-cover transition-transform duration-300 transform hover:scale-110 mx-auto">
+                </div>                
+            </div>
+              <!-- Like Button -->
+              <div class="mt-3 flex items-center gap-2">
+                <button @click="toggleLike" class="flex items-center text-gray-600 hover:text-red-500">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+                    <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 
+                    6.5 3.5 5 5.5 5c1.54 0 3.04.99 
+                    3.57 2.36h1.87C13.46 5.99 14.96 5 
+                    16.5 5 18.5 5 20 6.5 20 
+                    8.5c0 3.78-3.4 6.86-8.55 
+                    11.54L12 21.35z"/>
+                </svg>
+                <span class="ml-1 text-sm" x-text="likes"></span>
+                </button>
+                <span class="text-xs text-gray-500">people liked this</span>
+            </div>  
+          </div>
+
+          <div x-data="projectLike('post2Section')" class="bg-white p-4 rounded shadow">
+            <div class="flex items-center justify-start gap-2">
+              <img src="/icon/dan.jpg" alt="Profile"
+                   class="w-12 h-12 rounded-full border-4 border-white object-cover" />
+              <div>
+                <h3 class="text-lg font-semibold">Dan Fred</h3>
+                <div class="flex items-center gap-1 text-sm text-gray-500">
+                  <p>June 2, 2025</p>
+            
+                  <!-- Tooltip with Alpine.js -->
+                  <div x-data="{ show: false }" class="relative ml-1">
+                    <x-phosphor.icons::bold.globe-hemisphere-east 
+                      class="w-4 h-4 text-gray-500 cursor-pointer"
+                      @mouseenter="show = true" 
+                      @mouseleave="show = false"
+                    />
+                    <div 
+                      x-show="show" 
+                      x-transition 
+                      class="absolute bottom-full mb-1 px-2 py-1 text-xs text-white bg-black rounded shadow-lg"
+                      style="white-space: nowrap;"
+                    >
+                      Public
+                    </div>
+                  </div>
+            
+                </div>
+              </div>
+            </div>
+            
+            <p class="text-gray-700 mb-4">
+              I created a simple UI component library designed to help students and friends quickly build user interfaces.
+              The goal is to speed up development, encourage clean and optimized code, and provide reusable components for academic or personal projects—especially useful for upcoming thesis work.
+              Some components are still in development and will be published soon once everything is fully polished. <br>
+              Powered by the TALL Stack (TailwindCSS, Alpine.js, Laravel, and Livewire).
+            </p>
+             <div class="grid grid-cols-1 sm:grid-cols-1 gap-4">
+            <!-- Project 1 -->
+            <div class="text-center">
+              <img src="/icon/kodigu.jpg" 
+                   alt="A simple THRIFTSHOPBCD using DaisyUi Tailwind Laravel"
+                   class="rounded-lg shadow-md max-w-sm h-auto object-cover transition-transform duration-300 transform hover:scale-110 mx-auto">
+            </div>                
+        </div>
+          <!-- Like Button -->
+          <div class="mt-3 flex items-center gap-2">
+            <button @click="toggleLike" class="flex items-center text-gray-600 hover:text-red-500">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+                <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 
+                6.5 3.5 5 5.5 5c1.54 0 3.04.99 
+                3.57 2.36h1.87C13.46 5.99 14.96 5 
+                16.5 5 18.5 5 20 6.5 20 
+                8.5c0 3.78-3.4 6.86-8.55 
+                11.54L12 21.35z"/>
+            </svg>
+            <span class="ml-1 text-sm" x-text="likes"></span>
+            </button>
+            <span class="text-xs text-gray-500">people liked this</span>
+        </div>  
+      </div>
+      <div x-data="projectLike('post2Section')" class="bg-white p-4 rounded shadow">
+        <div class="flex items-center justify-start gap-2">
+          <img src="/icon/dan.jpg" alt="Profile"
+               class="w-12 h-12 rounded-full border-4 border-white object-cover" />
+          <div>
+            <h3 class="text-lg font-semibold">Dan Fred</h3>
+            <div class="flex items-center gap-1 text-sm text-gray-500">
+              <p>June 2, 2025</p>
+        
+              <!-- Tooltip with Alpine.js -->
+              <div x-data="{ show: false }" class="relative ml-1">
+                <x-phosphor.icons::bold.globe-hemisphere-east 
+                  class="w-4 h-4 text-gray-500 cursor-pointer"
+                  @mouseenter="show = true" 
+                  @mouseleave="show = false"
+                />
+                <div 
+                  x-show="show" 
+                  x-transition 
+                  class="absolute bottom-full mb-1 px-2 py-1 text-xs text-white bg-black rounded shadow-lg"
+                  style="white-space: nowrap;"
+                >
+                  Public
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </div>
+        
+        <p class="text-gray-700 mb-4">
+          I discovered my passion for building and translating UI/UX designs into functional code during my internship.
+          Since then, I've enjoyed turning visual concepts into responsive, user-friendly interfaces—bringing designs to life through clean and efficient front-end development.
+        </p>
+      <!-- Like Button -->
+      <div class="mt-3 flex items-center gap-2">
+        <button @click="toggleLike" class="flex items-center text-gray-600 hover:text-red-500">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+            <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 
+            6.5 3.5 5 5.5 5c1.54 0 3.04.99 
+            3.57 2.36h1.87C13.46 5.99 14.96 5 
+            16.5 5 18.5 5 20 6.5 20 
+            8.5c0 3.78-3.4 6.86-8.55 
+            11.54L12 21.35z"/>
+        </svg>
+        <span class="ml-1 text-sm" x-text="likes"></span>
+        </button>
+        <span class="text-xs text-gray-500">people liked this</span>
+    </div>  
+  </div>  
               <script>
               function projectGallery() {
                 return {
@@ -601,7 +612,8 @@
               
 
         </div>
-      </div>
+      </div> <!-- right col parent div closing -->
+
     </div>
   </div>
   
