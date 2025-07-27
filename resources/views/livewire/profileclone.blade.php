@@ -525,6 +525,58 @@ I was responsible for translating UI/UX designs into functional front-end code, 
         <span class="text-xs text-gray-500">people liked this</span>
     </div>  
   </div>  
+  <div x-data="projectLike('post3Section')" class="bg-white p-4 rounded shadow">
+    <div class="flex items-center justify-start gap-2">
+      <img src="/icon/dan.jpg" alt="Profile"
+           class="w-12 h-12 rounded-full border-4 border-white object-cover" />
+      <div>
+        <h3 class="text-lg font-semibold">Dan Fred</h3>
+        <div class="flex items-center gap-1 text-sm text-gray-500">
+          <p>June 2, 2025</p>
+    
+          <!-- Tooltip with Alpine.js -->
+          <div x-data="{ show: false }" class="relative ml-1">
+            <x-phosphor.icons::bold.globe-hemisphere-east 
+              class="w-4 h-4 text-gray-500 cursor-pointer"
+              @mouseenter="show = true" 
+              @mouseleave="show = false"
+            />
+            <div 
+              x-show="show" 
+              x-transition 
+              class="absolute bottom-full mb-1 px-2 py-1 text-xs text-white bg-black rounded shadow-lg"
+              style="white-space: nowrap;"
+            >
+              Public
+            </div>
+          </div>
+    
+        </div>
+      </div>
+    </div>
+    <p class="text-gray-700 mb-4"> Spline ❤️ 😊 </p>
+    <div class="overflow-hidden h-[400px] rounded-xl">
+    <iframe src="https://my.spline.design/robotfollowcursorforlandingpagemc-4qwPLbTvX90DgnZJC9Nhv9zi/"
+    class="w-full h-[600px] -mt-24" 
+    frameborder="0">
+</iframe>
+
+  <!-- Like Button -->
+  <div class="mt-3 flex items-center gap-2">
+    <button @click="toggleLike" class="flex items-center text-gray-600 hover:text-red-500">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="w-5 h-5" viewBox="0 0 24 24">
+        <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 
+        6.5 3.5 5 5.5 5c1.54 0 3.04.99 
+        3.57 2.36h1.87C13.46 5.99 14.96 5 
+        16.5 5 18.5 5 20 6.5 20 
+        8.5c0 3.78-3.4 6.86-8.55 
+        11.54L12 21.35z"/>
+    </svg>
+    <span class="ml-1 text-sm" x-text="likes"></span>
+    </button>
+    <span class="text-xs text-gray-500">people liked this</span>
+</div>  
+</div>  
               <script>
               function projectGallery() {
                 return {
