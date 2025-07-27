@@ -17,7 +17,7 @@
         <!-- Intro -->
        @include('livewire.includes.profile-left-col')
 
-       <div class="text-sm text-gray-500  space-y-1">
+       <div class="hidden sm:block text-sm text-gray-500  space-y-1">
         <p>Inspired by FB Profile | Developed by Dan Fred</p>
         <p>Powered by TALL Stack</p>
       </div>
