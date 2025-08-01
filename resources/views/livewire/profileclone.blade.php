@@ -95,7 +95,7 @@
           
   
           <div x-show="tab === 'client'" x-cloak class="space-y-8">
-            <div x-data="projectLike('clientSection')" class="bg-white p-4 rounded shadow">
+            <div x-data="projectLike('clientSection')" class="bg-white rounded shadow">
                 <p class="text-gray-700 font-bold mb-4">Client Projects</p>
                 <p class="text-gray-500 font-bold mb-4 text-xs">Posted : June 2 2025</p>
                 <p class="text-sm text-gray-600 mb-4">
@@ -131,7 +131,7 @@
                 </div>
             </div>
 
-            <div x-data="projectLike('clientSection')" class="bg-white p-4 rounded shadow">
+            <div x-data="projectLike('clientSection')" class="bg-white rounded shadow">
                 <p class="text-gray-700 font-bold mb-4">Client Projects</p>
                 <p class="text-gray-500 font-bold mb-4 text-xs">Posted : June 2 2025</p>
                 <p class="text-sm text-gray-600 mb-4">
@@ -172,17 +172,73 @@
             
           </div>
   
-          <div x-show="tab === 'photos'" x-cloak>
-            <div class="bg-white p-4 rounded shadow text-center">
-              <p class="text-gray-700 font-semibold text-lg">🚧 In Development</p>
-              <p class="text-sm text-gray-500 mt-2">
-                This tab is currently under development. Gallery of project screenshots and UI designs will be available soon.
-              </p>
+          <div x-show="tab === 'contact'" x-cloak class="">
+            <div class="bg-white rounded-lg shadow p-6 space-y-6">
+          
+              <!-- Header -->
+              <div class="text-center">
+                <h2 class="text-2xl font-bold text-gray-800">Contact Me</h2>
+                <p class="text-sm text-gray-500 mt-1">Let’s connect — open for freelance, collaboration, or internship roles.</p>
+              </div>
+          
+              <!-- Profile Info -->
+              <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4 text-center sm:text-left">
+                <img src="/icon/dan.jpg" alt="Profile Picture" class="w-24 h-24 rounded-full border-4 border-blue-500 object-cover">
+          
+                <div>
+                  <h3 class="text-xl font-bold text-gray-800">Dan Fred</h3>
+                  <p class="text-gray-500 text-sm">Full-Stack Developer</p>
+          
+                  <div class="mt-3">
+                    <p class="text-gray-700 text-sm font-medium">📧 Email:</p>
+                    <p class="text-blue-600 text-sm break-all">cablascablas@gmail.com</p>
+                  </div>
+                </div>
+              </div>
+          
+              <!-- Front-End Tools -->
+              <div class="bg-gray-100 rounded-lg p-4">
+                <h4 class="text-sm font-semibold text-gray-700 mb-2">🎨 Front-End Stack:</h4>
+                <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                  <li><span class="font-medium text-blue-600">Tailwind CSS</span> – Utility-first responsive styling.</li>
+                  <li><span class="font-medium text-purple-600">Alpine.js</span> – Lightweight JS for interactivity.</li>
+                  <li><span class="font-medium text-rose-600">Livewire</span> – Laravel reactive components without JS.</li>
+                  <li><span class="font-medium text-indigo-600">DaisyUI</span> – Tailwind-based UI component library.</li>
+                  <li><span class="font-medium text-green-600">Custom UI Components</span> – Clean and reusable design elements.</li>
+                </ul>
+              </div>
+          
+              <!-- Back-End Tools -->
+              <div class="bg-gray-100 rounded-lg p-4">
+                <h4 class="text-sm font-semibold text-gray-700 mb-2">🧰 Back-End Stack:</h4>
+                <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                  <li><span class="font-medium text-red-600">Laravel</span> – PHP framework for scalable applications.</li>
+                  <li><span class="font-medium text-yellow-600">PHP</span> – Core language for backend logic.</li>
+                  <li><span class="font-medium text-teal-600">MySQL</span> – Robust relational database system.</li>
+                </ul>
+              </div>
+          
+              <!-- Technical Knowledge -->
+              <div class="bg-gray-100 rounded-lg p-4">
+                <h4 class="text-sm font-semibold text-gray-700 mb-2">🧠 Additional Knowledge:</h4>
+                <ul class="text-sm text-gray-600 list-disc list-inside space-y-1">
+                  <li><span class="font-medium text-orange-600">Eloquent ORM</span> – Deep understanding of relationships (hasOne, hasMany, belongsToMany), query scopes, accessors, and eager loading.</li>
+                  <li><span class="font-medium text-blue-600">PHPMailer</span> – Sending secure and styled email alerts via SMTP, including attachments and HTML formatting.</li>
+                  <li><span class="font-medium text-gray-700">Cross-Browser Compatibility</span> – Ensuring UI consistency across Chrome, Firefox, Safari, and Edge using proper prefixes, responsive breakpoints, and feature fallback strategies.</li>
+                </ul>
+              </div>
+          
+              <!-- Footer Note -->
+              <div class="text-center text-gray-500 text-sm italic pt-4 border-t">
+                Committed to building responsive, maintainable, and cross-platform solutions from design to deployment.
+              </div>
+          
             </div>
           </div>
           
+          
           <div x-show="tab === 'personal'" x-cloak class="space-y-8">
-                <div class="bg-white p-4 rounded shadow">
+                <div class="bg-white rounded shadow">
                     <p class="text-gray-700 font-bold font-sans mb-5">My own personal projects and experiments.</p>
                     <p class="text-gray-500 text-xs">Posted: June 2 2025</p>
                     <p class="text-gray-700 text-sm mb-4">
@@ -206,7 +262,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-4 rounded shadow">
+                <div class="bg-white rounded shadow">
                     <p class="text-gray-500 text-xs">Posted: June 2 2025</p>
                     <p class="text-gray-700 text-sm mb-4">
                         This project was developed during my internship training with the dev team. While watching tutorials, I applied the knowledge I gained and implemented it into this project to strengthen my understanding and skills.
@@ -231,7 +287,7 @@
               </div>
   
           <div x-show="tab === 'internship'" x-cloak>
-            <div class="bg-white p-4 rounded shadow">
+            <div class="bg-white rounded shadow">
                 <p class="text-gray-700 mb-4">
                     These pictures were taken during our internship. The experience helped us gain real-world project exposure, enhanced our programming logic, and improved our problem-solving skills.
                   </p>
@@ -262,7 +318,7 @@
           </div>
 
         <!-- Alpine Tab Contents Here -->
-        <div class="bg-white p-4 rounded shadow space-y-4">
+        <div class="bg-white rounded shadow space-y-4">
             <h2 class="mt-2 font-bold text-gray-400">Pinned post</h2>
             <div x-data="projectGallery()" class="bg-white p-4 rounded shadow">
               <div class="flex items-center justify-start gap-2">
@@ -356,7 +412,7 @@
                 </div>
               </div>
 
-              <div x-data="projectLike('post1Section')" class="bg-white p-4 rounded shadow">
+              <div x-data="projectLike('post1Section')" class="bg-white rounded shadow">
                 <div class="flex items-center justify-start gap-2">
                   <img src="/icon/dan.jpg" alt="Profile"
                        class="w-12 h-12 rounded-full border-4 border-white object-cover" />
@@ -415,7 +471,7 @@ I was responsible for translating UI/UX designs into functional front-end code, 
             </div>  
           </div>
 
-          <div x-data="projectLike('post2Section')" class="bg-white p-4 rounded shadow">
+          <div x-data="projectLike('post2Section')" class="bg-white rounded shadow">
             <div class="flex items-center justify-start gap-2">
               <img src="/icon/dan.jpg" alt="Profile"
                    class="w-12 h-12 rounded-full border-4 border-white object-cover" />
@@ -475,7 +531,7 @@ I was responsible for translating UI/UX designs into functional front-end code, 
             <span class="text-xs text-gray-500">people liked this</span>
         </div>  
       </div>
-      <div x-data="projectLike('post2Section')" class="bg-white p-4 rounded shadow">
+      <div x-data="projectLike('post2Section')" class="bg-white rounded shadow">
         <div class="flex items-center justify-start gap-2">
           <img src="/icon/dan.jpg" alt="Profile"
                class="w-12 h-12 rounded-full border-4 border-white object-cover" />
@@ -525,7 +581,7 @@ I was responsible for translating UI/UX designs into functional front-end code, 
         <span class="text-xs text-gray-500">people liked this</span>
     </div>  
   </div>  
-  <div x-data="projectLike('post3Section')" class="bg-white p-4 rounded shadow">
+  <div x-data="projectLike('post3Section')" class="bg-white rounded shadow">
     <div class="flex items-center justify-start gap-2">
       <img src="/icon/dan.jpg" alt="Profile"
            class="w-12 h-12 rounded-full border-4 border-white object-cover" />
