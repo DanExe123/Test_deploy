@@ -178,7 +178,7 @@
               <!-- Header -->
               <div class="text-center">
                 <h2 class="text-2xl font-bold text-gray-800">Contact Me</h2>
-                <p class="text-sm text-gray-500 mt-1">Let’s connect — open for freelance, collaboration, or internship roles.</p>
+                <p class="text-sm text-gray-500 mt-1">Let’s connect — open for commission project, collaboration</p>
               </div>
           
               <!-- Profile Info -->
